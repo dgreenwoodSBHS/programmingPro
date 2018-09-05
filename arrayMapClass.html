@@ -1,0 +1,32 @@
+<!doctype html>
+
+<body>
+	<canvas id="gc" width="400" height="400"></canvas>
+	<script src="arrayMapping.js"></script>
+	<script>
+		var canvas, ctx;
+
+		window.onload = function() {
+			canvas = document.getElementById('gc');
+			ctx = canvas.getContext('2d');
+
+			setInterval(mainloop, 50 / 1000);
+		}
+
+		function mainloop() {
+			colorRect(0, 0, canvas.width, canvas.height, 'black');
+			drawImg("images/fullSpriteSheet.png", 0, 0, 40, 40, 100, 100, 40, 40);
+			//drawImg(img, sX, sY, sW, sH, dX, dY, dW, dH)
+			if (setup) {
+				settingUp();
+			}
+
+			//			if(imageArray.length < 0){
+			//				imageArray.forEach(function(item,index){
+			//					item.imageDraw();
+			//				});
+			//			}
+		}
+
+	</script>
+</body>
